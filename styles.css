@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+/*-------Home Section----------*/
+body {
+  background-color: #042548;
+  color: #8ad5eb;
+  height: 100vh;
+}
+header {
+  margin: 20px;
+  font-size: 20px;
+  float: left;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8ad5eb;
+  display: block;
+}
+main {
+  height: 60vh;
+  width: 100%;
+}
+#work {
+  background: #fff;
+  height: 50vh;
+  color: #8a54a2;
+}
+
+.image-circle {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: auto;
+}
+.image-circle img {
+  width: 250px;
+}
+/*-----------Work Section------*/
+.work {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+}
+.square {
+  width: 20%;
+  height: 20%;
+}
