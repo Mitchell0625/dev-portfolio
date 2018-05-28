@@ -56,3 +56,15 @@ main {
   width: 20%;
   height: 20%;
 }
+
+/*---------Contact Section-----------*/
+#contact {
+  height: 80vh;
+}
+.links a {
+  text-decoration: none;
+  color: #8ad5eb;
+}
+
+@media (min-width: 767px) {
+}
