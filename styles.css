@@ -23,43 +23,38 @@ nav a {
   display: block;
 }
 main {
-  height: 60vh;
+  height: 90%;
   width: 100%;
 }
+
+/*-----------Work Section------*/
 #work {
   background: #fff;
   height: 50vh;
   color: #8a54a2;
-}
-
-.image-circle {
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  margin: auto;
-}
-.image-circle img {
-  width: 250px;
-}
-/*-----------Work Section------*/
-.work {
-  display: flex;
-  height: 100vh;
+  height: 40%;
   width: 100vw;
   margin: auto;
 }
+
+#work h1 {
+  text-align: center;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .square {
   width: 20%;
   height: 20%;
+  border: 1px solid black;
 }
 
 /*---------Contact Section-----------*/
 #contact {
-  height: 80vh;
+  height: ;
 }
 .links a {
   text-decoration: none;
