@@ -11,11 +11,11 @@ body {
   color: #8ad5eb;
   height: 100vh;
   width: 100vw;
-  background-image: url("./back.png");
+  background-image: url("./iceberg.png");
 
   background-size: cover;
   /* background-position: 50% 50%; */
-  background-size: 200%;
+  /* background-size: 200%; */
   background-repeat: no-repeat;
   background-blend-mode: darken;
 }
