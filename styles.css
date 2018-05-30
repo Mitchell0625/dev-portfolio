@@ -40,7 +40,7 @@ nav {
   width: 100vw;
   margin: 0px auto;
   text-align: center;
-  padding-top: 80px;
+  padding: 80px;
 }
 #home h1 {
   font-size: 40px;
@@ -57,17 +57,35 @@ nav {
 .vivid:hover {
   color: #ff0000;
 }
-
+/*---Skills--*/
+.skills {
+  margin-bottom: 80px;
+}
+.skills h2 {
+  text-align: center;
+}
 .skills i {
-  width: 50px;
+  font-size: 50px;
+  margin: 10px;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 /*-----------Work Section------*/
+#work h2 {
+  text-align: center;
+}
 .screenshot {
   height: 20vh;
 }
 .square {
   width: 100vw;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /*---------Contact Section-----------*/
 .links a {
@@ -78,6 +96,7 @@ nav {
   .container {
     display: none;
   }
+
   nav {
     width: 200px;
     display: flex;
@@ -85,5 +104,11 @@ nav {
     margin: 20px;
     font-size: 20px;
     letter-spacing: 1px;
+  }
+  .square {
+    width: 30%;
+  }
+  .skills h2 {
+    margin-bottom: 50px;
   }
 }
