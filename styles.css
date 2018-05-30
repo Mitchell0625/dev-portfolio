@@ -3,71 +3,74 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  color: #333;
 }
-
-/*-------Home Section----------*/
-body {
-  /* background-color: #042548; */
-  color: #8ad5eb;
-  height: 100vh;
-  width: 100vw;
-  background-image: url("./iceberg.png");
-
-  background-size: cover;
-  /* background-position: 50% 50%; */
-  /* background-size: 200%; */
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-}
+/*----Header-----*/
 header {
-  margin: 20px;
-  font-size: 20px;
-  float: left;
-}
-
-nav a {
-  text-decoration: none;
-  color: #8ad5eb;
-  display: block;
-}
-main {
-  height: 90%;
-  width: 100%;
-}
-
-/*-----------Work Section------*/
-#work {
-  background: #fff;
-  height: 50vh;
-  color: #8a54a2;
-  height: 40%;
-  width: 100vw;
-  margin: auto;
-}
-
-#work h1 {
-  text-align: center;
-}
-.projects {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 30px;
 }
-
-.square {
-  width: 20%;
-  height: 20%;
-  border: 1px solid black;
+header > img {
+  height: 50px;
 }
-
+nav {
+  display: none;
+}
+.container {
+  display: inline-block;
+}
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/*-------Home Section----------*/
+#home {
+  height: 60vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+#home h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#home p {
+  font-size: 20px;
+}
+.vivid {
+  color: #0081ca;
+}
+.vivid:hover {
+  color: #ff0000;
+}
+.skills i {
+  width: 50px;
+}
+/*-----------Work Section------*/
+.screenshot {
+  height: 20vh;
+}
 /*---------Contact Section-----------*/
-#contact {
-  height: ;
-}
 .links a {
-  text-decoration: none;
-  color: #8ad5eb;
+  color: #0081ca;
 }
 
 @media (min-width: 767px) {
+  .container {
+    display: none;
+  }
+  nav {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
 }
