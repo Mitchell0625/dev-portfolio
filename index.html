@@ -19,7 +19,9 @@
 <body>
     <div class='page-container'>
         <header>
-            <img class='logo' src='./Brand.png' alt='logo' />
+            <a href='#home'>
+                <img class='logo' src='./Brand.png' alt='logo' />
+            </a>
             <div class='container'>
                 <div class='bar'></div>
                 <div class='bar'></div>
@@ -36,7 +38,7 @@
         <main id='home'>
             <h1>Hi, my name is Alexx.</h1>
             <p>I am a Full-Stack Web Developer based in Dallas, TX</p>
-            <p>who loves to create websites that speak in
+            <p class='pick'>who loves to create websites that speak in
                 <span class='vivid'>vivid</span> colors.</p>
         </main>
         <section class='skills'>
@@ -53,7 +55,7 @@
             <i class="devicon-git-plain colored"></i>
         </section>
         <section id='work'>
-            <h1>Work</h1>
+            <h2>Work</h2>
             <div class='projects'>
                 <div class='square'>
                     <a href='https://github.com/Mitchell0625/donuts'>
@@ -86,7 +88,10 @@
         </section>
     </div>
 
-    <script></script>
+    <script>
+        var colors = document.querySelector('.pick');
+
+    </script>
 </body>
 
 
