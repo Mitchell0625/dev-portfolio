@@ -6,6 +6,9 @@
   text-decoration: none;
   color: #333;
 }
+p {
+  font-family: "Open sans", sans-serif;
+}
 
 /* section h2 {
   border-bottom: 3px double #0081ca;
@@ -64,6 +67,7 @@ nav {
 }
 .skills h2 {
   text-align: center;
+  margin-bottom: 38px;
 }
 .skills i {
   font-size: 50px;
@@ -77,20 +81,39 @@ nav {
 /*-----------Work Section------*/
 #work h2 {
   text-align: center;
+  padding-top: 40px;
 }
-.screenshot {
-  height: 20vh;
-}
-.square {
-  width: 100vw;
-  padding: 20px;
+.projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.screenshot {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.square {
+  width: 100vw;
+  overflow: hidden;
+  padding: 20px 35px;
+}
+.placeholder {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 10px;
+  background-color: gray;
+}
 /*---------Contact Section-----------*/
 .links a {
   color: #0081ca;
+}
+#contact {
+  height: 20vh;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 767px) {
@@ -109,10 +132,24 @@ nav {
   nav a:hover {
     color: #0081ca;
   }
-  .square {
-    width: 30%;
-  }
+
   .skills h2 {
     margin-bottom: 50px;
+  }
+  .projects {
+    flex-direction: row;
+  }
+  .square p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills {
+    margin: 20px 80px 80px;
+  }
+  .square {
+    width: 30%;
+    padding: 20px 60px;
   }
 }
