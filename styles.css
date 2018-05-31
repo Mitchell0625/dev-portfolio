@@ -50,12 +50,13 @@ nav {
 #home p {
   font-size: 20px;
 }
+
 .vivid {
   color: #0081ca;
   /* color: #66b6ab; */
 }
 .vivid:hover {
-  color: #ff0000;
+  color: #ff3a00;
 }
 /*---Skills--*/
 .skills {
@@ -104,6 +105,9 @@ nav {
     margin: 20px;
     font-size: 20px;
     letter-spacing: 1px;
+  }
+  nav a:hover {
+    color: #0081ca;
   }
   .square {
     width: 30%;

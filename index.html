@@ -36,9 +36,10 @@
             </nav>
         </header>
         <main id='home'>
-            <h1>Hi, my name is Alexx.</h1>
+            <h1>Hi, my name is Alexx.
+            </h1>
             <p>I am a full-stack web developer based in Dallas, TX</p>
-            <p class='pick'>who loves to create websites that speak in
+            <p id='pick'>who loves to create websites that speak in
                 <span class='vivid'>vivid</span> colors.</p>
         </main>
         <section class='skills'>
@@ -91,8 +92,14 @@
     </div>
 
     <script>
-        var colors = document.querySelector('.pick');
+        var firstDiv = document.createElement('div');
+        var secondDiv = document.createElement('div');
+        firstDiv.setAttribute("style", "width: 50px; height: 5px; background-color: yellow; margin-top: 40px; position: relative; ")
+        secondDiv.setAttribute("style", "width: 10px; height: 5px; background-color: blue; margin: 10px; position: relative; display: inline-block")
+        let pick = document.getElementById('pick')
 
+        pick.appendChild(firstDiv);
+        firstDiv.appendChild(secondDiv);
     </script>
 </body>
 
