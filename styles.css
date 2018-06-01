@@ -14,21 +14,39 @@ section h2 {
   text-align: center;
 }
 /*----Header-----*/
-header {
+nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px;
+  margin: 23px;
+}
+.wide {
+  display: none;
 }
 .logo {
   height: 50px;
 }
-nav {
+
+#slide {
   display: none;
 }
-#container {
-  display: inline-block;
+
+#slide.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* text-align: left; */
+  width: 100px;
+  font-size: 25px;
+  height: 40vh;
+  line-height: 50px;
+  transition: 3s top;
+  padding-left: 3px;
+  position: relative;
+  top: 30%;
 }
+
 .bar1,
 .bar2,
 .bar3 {
@@ -36,7 +54,7 @@ nav {
   height: 5px;
   background-color: #333;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .open .bar1 {
@@ -55,34 +73,40 @@ nav {
   width: 100vw;
   margin: 0px auto;
   text-align: center;
-  padding: 80px;
+  padding: 82px 40px 0px 40px;
 }
 #home h1 {
   font-size: 40px;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-#home p {
-  font-size: 20px;
-}
 
 .vivid {
   color: #0081ca;
-  /* color: #66b6ab; */
 }
 .vivid:hover {
   color: #ff3a00;
 }
+
+#home p {
+  font-size: 16px;
+}
+
+.line {
+  height: 5px;
+}
 /*---Skills--*/
 .skills {
   margin-bottom: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .skills h2 {
   text-align: center;
   margin-bottom: 38px;
 }
 .skills i {
-  font-size: 50px;
+  font-size: 40px;
   margin: 10px;
 }
 .icons {
@@ -109,6 +133,9 @@ nav {
   overflow: hidden;
   padding: 20px 35px;
 }
+.square h3 {
+  letter-spacing: 0.5px;
+}
 .placeholder {
   width: 100%;
   height: 20vh;
@@ -121,22 +148,32 @@ nav {
 /*---------Contact Section-----------*/
 .links a {
   color: #0081ca;
+  font-size: 50px;
+  margin: 10px;
 }
 #contact {
-  height: 20vh;
+  height: 30vh;
   margin: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 25px;
+}
+#contact h2 {
+  margin-bottom: 38px;
 }
 
 @media (min-width: 767px) {
-  .container {
+  header {
+    margin: 30px;
+  }
+  #container,
+  #slide {
     display: none;
   }
 
-  nav {
+  .wide {
     width: 200px;
     display: flex;
     justify-content: space-between;
@@ -144,12 +181,23 @@ nav {
     font-size: 20px;
     letter-spacing: 1px;
   }
-  nav a:hover {
+
+  .wide a:hover {
     color: #0081ca;
+  }
+  #home {
+    padding: 80px;
+  }
+  #home p {
+    font-size: 20px;
   }
 
   .skills h2 {
     margin-bottom: 50px;
+  }
+  .skills i {
+    font-size: 50px;
+    margin: 10px;
   }
   .projects {
     flex-direction: row;

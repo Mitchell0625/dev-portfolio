@@ -19,19 +19,28 @@
 <body>
     <div class='page-container'>
         <header>
-            <a href='#home'>
-                <img class='logo' src='./Brand.png' alt='logo' />
-            </a>
-            <div id='container'>
-                <div class='bar1'></div>
-                <div class='bar2'></div>
-                <div class='bar3'></div>
+            <nav>
+                <div>
+                    <a href='#home'>
+                        <img class='logo' src='./Brand.png' alt='logo' />
+                    </a>
+                    <div class='wide'>
+                        <a href='#home'>home</a>
+                        <a href='#work'>work</a>
+                        <a href='#contact'>contact</a>
+                    </div>
+                    <div id='container'>
+                        <div class='bar1'></div>
+                        <div class='bar2'></div>
+                        <div class='bar3'></div>
 
-            </div>
-            <nav id='slide'>
-                <a href='#home'>home</a>
-                <a href='#work'>work</a>
-                <a href='#contact'>contact</a>
+                    </div>
+                </div>
+                <div id='slide'>
+                    <a href='#home'>home</a>
+                    <a href='#work'>work</a>
+                    <a href='#contact'>contact</a>
+                </div>
             </nav>
         </header>
         <main id='home'>
@@ -39,6 +48,12 @@
             <p>I am a full-stack web developer based in Dallas, TX</p>
             <p id='pick'>who loves to create websites that speak in
                 <span class='vivid'>vivid</span> colors.</p>
+            <div class='line coral'></div>
+            <div class='line yellow'></div>
+            <div class='line blue'></div>
+            <div class='line purple'></div>
+            <div class='line green'></div>
+            <div class='line yellow'></div>
         </main>
         <section class='skills'>
             <h2>Skills</h2>
@@ -70,7 +85,7 @@
                     <a href='https://github.com/AHISDM13/AHIS'>
                         <div class='placeholder'></div>
                     </a>
-                    <h3>AHIS</h3>
+                    <h3>Nito</h3>
                     <p>An interactive student/teacher application that allows teachers to creates quiz materials and administer
                         tests from the same application.</p>
                     <p class='tech'>Tech used: React, Redux, Node.js, Express, Chart.js, Sass, Material-UI</p>
@@ -79,7 +94,7 @@
                     <a href='https://github.com/WeDriveApp/wedrive'>
                         <div class='placeholder'></div>
                     </a>
-                    <h3>WeDrive</h3>
+                    <h3>WeDrive - in progress</h3>
                     <p>A web application developed to enable weather updates based on the user's driving route.</p>
                     <p class='tech'>Techs used: React, graphQL, Apollo, OpenWeatherMap API, Google Maps Routes API</p>
                 </div>
@@ -106,26 +121,41 @@
     </div>
 
     <script>
-        var firstDiv = document.createElement('div');
-        var secondDiv = document.createElement('div');
-        firstDiv.setAttribute("style", "width: 50px; height: 5px; background-color: yellow; margin-top: 40px; position: relative; ")
-        secondDiv.setAttribute("style", "width: 10px; height: 5px; background-color: blue; margin: 10px; position: relative; display: inline-block")
+
+
         let pick = document.getElementById('pick')
         let menu = document.getElementById('container');
-        menu.addEventListener('click', openMenu, closeMenu);
+        let slider = document.getElementById('slide')
+        menu.addEventListener('click', openMenu);
+        slider.addEventListener('click', closeMenu);
 
         function openMenu() {
-            menu.classList.toggle('open');
-            document.getElementById('slide').style.width = "100%"
-            document.getElementById('slide').style.background = "blue"
-            document.getElementById('slide').style.display = "block"
+            if (!menu.classList.contains('open')) {
+                menu.classList.add('open');
+                slider.classList.add('open');
+            } else {
+                console.log('else')
+                menu.classList.remove('open');
+                slider.classList.remove('open');
+
+            }
         }
         function closeMenu() {
+            let clicked = slider.querySelectorAll('a');
+            slider.classList.remove('open');
+            menu.classList.remove('open');
 
         }
 
-        pick.appendChild(firstDiv);
-        firstDiv.appendChild(secondDiv);
+
+
+
+
+
+        // }
+
+        // pick.appendChild(firstDiv);
+        // firstDiv.appendChild(secondDiv);
     </script>
 </body>
 
