@@ -21,7 +21,7 @@ nav > div {
   align-items: center;
   margin: 23px;
 }
-.wide {
+#wide {
   display: none;
 }
 .logo {
@@ -47,6 +47,9 @@ nav > div {
   position: relative;
   top: 30%;
 }
+#slide a:hover {
+  border-bottom: 1px solid #0081ca;
+}
 
 .bar1,
 .bar2,
@@ -69,14 +72,14 @@ nav > div {
 }
 
 /*-------Home Section----------*/
-#home {
+#main {
   height: 60vh;
   width: 100vw;
   margin: 0px auto;
   text-align: center;
   padding: 82px 40px 0px 40px;
 }
-#home h1 {
+#main h1 {
   font-size: 40px;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -89,14 +92,15 @@ nav > div {
   color: #ff3a00;
 }
 
-#home p {
+#main p {
   font-size: 16px;
 }
 
 .line {
   height: 10px;
-  width: 40px;
-  display: none;
+  width: 0px;
+  transition: ease-in-out 0.1s;
+  /* display: none; */
   margin: 40px auto;
 }
 .coral {
@@ -200,7 +204,7 @@ nav > div {
     display: none;
   }
 
-  .wide {
+  #wide {
     width: 200px;
     display: flex;
     justify-content: space-between;
@@ -209,13 +213,13 @@ nav > div {
     letter-spacing: 1px;
   }
 
-  .wide a:hover {
+  #wide a:hover {
     color: #0081ca;
   }
-  #home {
+  #main {
     padding: 80px;
   }
-  #home p {
+  #main p {
     font-size: 20px;
   }
 

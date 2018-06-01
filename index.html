@@ -18,13 +18,13 @@
 
 <body>
     <div class='page-container'>
-        <header>
+        <header id='home'>
             <nav>
                 <div>
                     <a href='#home'>
                         <img class='logo' src='./Brand.png' alt='logo' />
                     </a>
-                    <div class='wide'>
+                    <div id='wide'>
                         <a href='#home'>home</a>
                         <a href='#work'>work</a>
                         <a href='#contact'>contact</a>
@@ -43,7 +43,7 @@
                 </div>
             </nav>
         </header>
-        <main id='home'>
+        <main id='main'>
             <h1>Hi, my name is Alexx.</h1>
             <p>I am a full-stack web developer based in Dallas, TX</p>
             <p id='pick'>who loves to create websites that speak in
@@ -74,7 +74,7 @@
             <h2>Work</h2>
             <div class='projects'>
                 <div class='square'>
-                    <a href='https://github.com/Mitchell0625/donuts'>
+                    <a href='https://github.com/Mitchell0625/donuts' target='_blank'>
                         <img class='screenshot' src='./gd.png' alt='screenshot of Good Donuts landing page' />
                     </a>
                     <h3>Good Donuts</h3>
@@ -82,7 +82,7 @@
                     <p class='tech'>Tech used: React, Redux, Node.js, Express, Stripe API, Google Maps API</p>
                 </div>
                 <div class=' square '>
-                    <a href='https://github.com/AHISDM13/AHIS'>
+                    <a href='https://github.com/AHISDM13/AHIS' target='_blank'>
                         <div class='placeholder'></div>
                     </a>
                     <h3>Nito</h3>
@@ -91,7 +91,7 @@
                     <p class='tech'>Tech used: React, Redux, Node.js, Express, Chart.js, Sass, Material-UI</p>
                 </div>
                 <div class='square '>
-                    <a href='https://github.com/WeDriveApp/wedrive'>
+                    <a href='https://github.com/WeDriveApp/wedrive' target='_blank'>
                         <div class='placeholder'></div>
                     </a>
                     <h3>WeDrive - in progress</h3>
@@ -105,13 +105,13 @@
             <h3>Let's talk</h3>
             <p>Wanna get in touch?</p>
             <p>Feel free to contact me via email at
-                <a href='mailto:alexxmitchell25@gmail.com'>alexxmitchell25@gmail.com</a>
+                <a href='mailto:alexxmitchell25@gmail.com' target='_blank'>alexxmitchell25@gmail.com</a>
             </p>
             <div class='links'>
-                <a href='mailto:alexxmitchell25@gmail.com' class="fas fa-envelope fa-2x"></a>
-                <a href='https://github.com/Mitchell0625' class="fab fa-github-square fa-2x"></a>
+                <a href='mailto:alexxmitchell25@gmail.com' target='_blank' class="fas fa-envelope fa-2x"></a>
+                <a href='https://github.com/Mitchell0625' target='_blank' class="fab fa-github-square fa-2x"></a>
 
-                <a href='https://www.linkedin.com/in/alexxmitchell/' class="fab fa-linkedin fa-2x">
+                <a href='https://www.linkedin.com/in/alexxmitchell/' target='_blank' class="fab fa-linkedin fa-2x">
                 </a>
 
 
@@ -126,12 +126,13 @@
 
         let menu = document.getElementById('container');
         let slider = document.getElementById('slide');
+        let wider = document.getElementById('wide');
         let lines = document.getElementsByClassName('line');
-        let bod = document.getElementsByTagName('BODY')
 
         menu.addEventListener('click', openMenu);
         slider.addEventListener('click', closeMenu);
-        // bod.addEventListener("load", loopedLines)
+        wider.addEventListener('click', scrollTo)
+        window.addEventListener('load', drawLines)
 
         function openMenu() {
             if (!menu.classList.contains('open')) {
@@ -150,8 +151,36 @@
             menu.classList.remove('open');
 
         }
-        // function loopedLines() {
-        //     console.log(lines.length);
+        async function loopedLines() {
+            console.log("fired")
+
+            for (var i = 0; i < lines.length; i++) {
+                await drawLine(lines[i]);
+            }
+        }
+
+        function drawLine(line) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    line.style.display = 'inline-block';
+                    line.style.marginRight = '10px';
+                    line.style.width = '40px';
+                    resolve();
+                }, 500)
+            })
+        }
+
+
+        function drawLines() {
+            console.log(lines)
+            loopedLines();
+            // let cleared = window.setInterval(loopedLines, 4000);
+            // window.clearInterval(cleared);
+
+
+        }
+        // function scrollTo(hash) {
+        //     location.hash = '#' + hash;
         // }
 
 
