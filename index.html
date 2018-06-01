@@ -22,22 +22,20 @@
             <a href='#home'>
                 <img class='logo' src='./Brand.png' alt='logo' />
             </a>
-            <div class='container'>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
+            <div id='container'>
+                <div class='bar1'></div>
+                <div class='bar2'></div>
+                <div class='bar3'></div>
 
             </div>
-            <nav class='slide'>
-
+            <nav id='slide'>
                 <a href='#home'>home</a>
                 <a href='#work'>work</a>
                 <a href='#contact'>contact</a>
             </nav>
         </header>
         <main id='home'>
-            <h1>Hi, my name is Alexx.
-            </h1>
+            <h1>Hi, my name is Alexx.</h1>
             <p>I am a full-stack web developer based in Dallas, TX</p>
             <p id='pick'>who loves to create websites that speak in
                 <span class='vivid'>vivid</span> colors.</p>
@@ -66,19 +64,24 @@
                     </a>
                     <h3>Good Donuts</h3>
                     <p>An e-commerce site that allows donut lovers to craft, visualize, and purchase their crafted donuts.</p>
-                    <p>Tech used: React, Redux, Node.js, Express, Stripe API, Google Maps API</p>
+                    <p class='tech'>Tech used: React, Redux, Node.js, Express, Stripe API, Google Maps API</p>
                 </div>
                 <div class=' square '>
-                    <div class='placeholder'></div>
+                    <a href='https://github.com/AHISDM13/AHIS'>
+                        <div class='placeholder'></div>
+                    </a>
                     <h3>AHIS</h3>
                     <p>An interactive student/teacher application that allows teachers to creates quiz materials and administer
                         tests from the same application.</p>
-                    <p>Tech used: React, Redux, Node.js, Express, Chart.js, Sass, Material-UI</p>
+                    <p class='tech'>Tech used: React, Redux, Node.js, Express, Chart.js, Sass, Material-UI</p>
                 </div>
                 <div class='square '>
-                    <div class='placeholder'></div>
+                    <a href='https://github.com/WeDriveApp/wedrive'>
+                        <div class='placeholder'></div>
+                    </a>
                     <h3>WeDrive</h3>
-                    <p>A web application developed to allow people </p>
+                    <p>A web application developed to enable weather updates based on the user's driving route.</p>
+                    <p class='tech'>Techs used: React, graphQL, Apollo, OpenWeatherMap API, Google Maps Routes API</p>
                 </div>
             </div>
         </section>
@@ -86,7 +89,9 @@
             <h2>Contact</h2>
             <h3>Let's talk</h3>
             <p>Wanna get in touch?</p>
-            <p>Feel free to contact me via email at alexxmitchell25@gmail.com</p>
+            <p>Feel free to contact me via email at
+                <a href='mailto:alexxmitchell25@gmail.com'>alexxmitchell25@gmail.com</a>
+            </p>
             <div class='links'>
                 <a href='mailto:alexxmitchell25@gmail.com' class="fas fa-envelope fa-2x"></a>
                 <a href='https://github.com/Mitchell0625' class="fab fa-github-square fa-2x"></a>
@@ -106,6 +111,18 @@
         firstDiv.setAttribute("style", "width: 50px; height: 5px; background-color: yellow; margin-top: 40px; position: relative; ")
         secondDiv.setAttribute("style", "width: 10px; height: 5px; background-color: blue; margin: 10px; position: relative; display: inline-block")
         let pick = document.getElementById('pick')
+        let menu = document.getElementById('container');
+        menu.addEventListener('click', openMenu, closeMenu);
+
+        function openMenu() {
+            menu.classList.toggle('open');
+            document.getElementById('slide').style.width = "100%"
+            document.getElementById('slide').style.background = "blue"
+            document.getElementById('slide').style.display = "block"
+        }
+        function closeMenu() {
+
+        }
 
         pick.appendChild(firstDiv);
         firstDiv.appendChild(secondDiv);
