@@ -13,6 +13,7 @@ p {
 section h2 {
   text-align: center;
 }
+
 /*----Header-----*/
 nav > div {
   display: flex;
@@ -93,8 +94,34 @@ nav > div {
 }
 
 .line {
-  height: 5px;
+  height: 10px;
+  width: 40px;
+  display: none;
+  margin: 40px auto;
 }
+.coral {
+  background-color: #ff3a00;
+}
+
+.yellow {
+  background-color: #ffab00;
+}
+
+.blue {
+  background-color: #208ccc;
+}
+
+.purple {
+  background-color: #6554c0;
+}
+/* .green {
+  background-color: #36b37e;
+} */
+
+.green {
+  background-color: #da5799;
+}
+
 /*---Skills--*/
 .skills {
   margin-bottom: 80px;

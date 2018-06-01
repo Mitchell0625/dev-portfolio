@@ -123,11 +123,15 @@
     <script>
 
 
-        let pick = document.getElementById('pick')
+
         let menu = document.getElementById('container');
-        let slider = document.getElementById('slide')
+        let slider = document.getElementById('slide');
+        let lines = document.getElementsByClassName('line');
+        let bod = document.getElementsByTagName('BODY')
+
         menu.addEventListener('click', openMenu);
         slider.addEventListener('click', closeMenu);
+        // bod.addEventListener("load", loopedLines)
 
         function openMenu() {
             if (!menu.classList.contains('open')) {
@@ -146,16 +150,16 @@
             menu.classList.remove('open');
 
         }
-
-
-
-
-
-
+        // function loopedLines() {
+        //     console.log(lines.length);
         // }
 
-        // pick.appendChild(firstDiv);
-        // firstDiv.appendChild(secondDiv);
+
+
+
+
+
+
     </script>
 </body>
 
