@@ -15,6 +15,7 @@ section h2 {
 }
 
 /*----Header-----*/
+
 nav > div {
   display: flex;
   justify-content: space-between;
@@ -87,6 +88,7 @@ nav > div {
 
 .vivid {
   color: #0081ca;
+  font-size: 21px;
 }
 .vivid:hover {
   color: #ff3a00;
@@ -94,12 +96,13 @@ nav > div {
 
 #main p {
   font-size: 16px;
+  font-family: "Oswald", sans-serif;
 }
 
 .line {
-  height: 10px;
+  height: 5px;
   width: 0px;
-  transition: ease-in-out 0.1s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   /* display: none; */
   margin: 40px auto;
 }
@@ -118,11 +121,11 @@ nav > div {
 .purple {
   background-color: #6554c0;
 }
-/* .green {
-  background-color: #36b37e;
-} */
-
 .green {
+  background-color: #65d600;
+}
+
+.pink {
   background-color: #da5799;
 }
 
@@ -144,6 +147,11 @@ nav > div {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.learning {
+  height: 40px;
+  width: 41px;
+  margin: 10px;
 }
 /*-----------Work Section------*/
 #work h2 {

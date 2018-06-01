@@ -53,7 +53,7 @@
             <div class='line blue'></div>
             <div class='line purple'></div>
             <div class='line green'></div>
-            <div class='line yellow'></div>
+            <div class='line pink'></div>
         </main>
         <section class='skills'>
             <h2>Skills</h2>
@@ -66,9 +66,13 @@
                 <i class="devicon-postgresql-plain colored"></i>
                 <i class="devicon-react-original colored"></i>
                 <i class="devicon-sass-original colored"></i>
-                <i class="devicon-heroku-original colored"></i>
+                <img class='learning' src='./redux.png' alt='redux logo' />
+                <!-- <i class="devicon-heroku-original colored"></i> -->
                 <i class="devicon-git-plain colored"></i>
             </div>
+            <h3>Currently Learning:</h3>
+            <img class='learning' src='./GraphQL.png' alt='graphQL logo' />
+
         </section>
         <section id='work'>
             <h2>Work</h2>
@@ -163,10 +167,10 @@
             return new Promise(resolve => {
                 setTimeout(() => {
                     line.style.display = 'inline-block';
-                    line.style.marginRight = '10px';
+                    // line.style.marginRight = '10px';
                     line.style.width = '40px';
                     resolve();
-                }, 500)
+                }, 200)
             })
         }
 
