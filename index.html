@@ -70,8 +70,10 @@
                 <!-- <i class="devicon-heroku-original colored"></i> -->
                 <i class="devicon-git-plain colored"></i>
             </div>
-            <h3>Currently Learning:</h3>
-            <img class='learning' src='./GraphQL.png' alt='graphQL logo' />
+            <div class='current-learning'>
+                <h3>Currently Learning:</h3>
+                <img class='learning' src='./GraphQL.png' alt='graphQL logo' />
+            </div>
 
         </section>
         <section id='work'>
@@ -106,7 +108,7 @@
         </section>
         <section id='contact' class='section '>
             <h2>Contact</h2>
-            <h3>Let's talk</h3>
+            <!-- <h3>Let's talk</h3> -->
             <p>Wanna get in touch?</p>
             <p>Feel free to contact me via email at
                 <a href='mailto:alexxmitchell25@gmail.com' target='_blank'>alexxmitchell25@gmail.com</a>
@@ -122,6 +124,9 @@
             </div>
 
         </section>
+        <footer>
+            <p>Copyright Alexx Mitchell 2018</p>
+        </footer>
     </div>
 
     <script>
@@ -132,6 +137,7 @@
         let slider = document.getElementById('slide');
         let wider = document.getElementById('wide');
         let lines = document.getElementsByClassName('line');
+        let works = document.getElementById('#work')
 
         menu.addEventListener('click', openMenu);
         slider.addEventListener('click', closeMenu);
@@ -178,14 +184,13 @@
         function drawLines() {
             console.log(lines)
             loopedLines();
-            // let cleared = window.setInterval(loopedLines, 4000);
-            // window.clearInterval(cleared);
-
 
         }
-        // function scrollTo(hash) {
-        //     location.hash = '#' + hash;
-        // }
+
+        function scrollToTop() {
+            works.scrollIntoView(true)
+        }
+
 
 
 

@@ -137,7 +137,7 @@ nav > div {
 }
 .skills h2 {
   text-align: center;
-  margin-bottom: 38px;
+  margin: 38px 0px 25px 0px;
 }
 .skills i {
   font-size: 40px;
@@ -148,12 +148,20 @@ nav > div {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.current-learning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 .learning {
   height: 40px;
   width: 41px;
   margin: 10px;
 }
 /*-----------Work Section------*/
+
 #work h2 {
   text-align: center;
   padding-top: 40px;
@@ -184,6 +192,11 @@ nav > div {
 .tech {
   margin-top: 20px;
 }
+footer p {
+  font-size: 12px;
+  text-align: center;
+  padding: 30px 30px 10px 30px;
+}
 /*---------Contact Section-----------*/
 .links a {
   color: #0081ca;
@@ -202,7 +215,9 @@ nav > div {
 #contact h2 {
   margin-bottom: 38px;
 }
-
+#contact p {
+  text-align: center;
+}
 @media (min-width: 767px) {
   header {
     margin: 30px;
@@ -232,11 +247,16 @@ nav > div {
   }
 
   .skills h2 {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    padding-top: 30px;
   }
   .skills i {
     font-size: 50px;
     margin: 10px;
+  }
+  .learning {
+    width: 50px;
+    height: 50px;
   }
   .projects {
     flex-direction: row;
