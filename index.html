@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name='description' content='Full-Stack Web Developer' />
-    <meta name='keywords' content="Web, Front-End, Javascript, Node.js, React, HTML, CSS, Web, developer" />
+    <meta name='keywords' content="Web, Front-End, Javascript, Node.js, React, HTML, CSS, Web, developer, Back-End" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='./styles.css' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
@@ -82,7 +82,7 @@
             <h2>Work</h2>
             <div class='projects'>
                 <div class='square'>
-                    <a href='https://github.com/Mitchell0625/donuts' target='_blank'>
+                    <a href='gooddonuts.fun' target='_blank'>
                         <img class='screenshot' src='./gd.png' alt='screenshot of Good Donuts landing page' />
                     </a>
                     <h3>Good Donuts</h3>
@@ -90,7 +90,7 @@
                     <p class='tech'>Tech used: React, Redux, Node.js, Express, PostGreSQL, Stripe API, Google Maps API</p>
                 </div>
                 <div class=' square '>
-                    <a href='https://github.com/AHISDM13/AHIS' target='_blank'>
+                    <a href='nito.fun' target='_blank'>
                         <img class='screenshot' src='./nito1.png' alt='screenshot of Nito landing page' />
                     </a>
                     <h3>Nito</h3>
@@ -112,7 +112,7 @@
         <section id='contact' class='section '>
             <div class='gray'></div>
             <h2>Contact</h2>
-            <!-- <h3>Let's talk</h3> -->
+
             <p>Wanna get in touch?</p>
             <p>Feel free to contact me via email at
                 <a href='mailto:alexxmitchell25@gmail.com' target='_blank'>alexxmitchell25@gmail.com</a>
@@ -123,10 +123,7 @@
 
                 <a href='https://www.linkedin.com/in/alexxmitchell/' target='_blank' class="fab fa-linkedin fa-2x">
                 </a>
-
-
             </div>
-
         </section>
         <footer>
             <p>Copyright Alexx Mitchell 2018</p>
@@ -153,7 +150,7 @@
                 menu.classList.add('open');
                 slider.classList.add('open');
             } else {
-                console.log('else')
+
                 menu.classList.remove('open');
                 slider.classList.remove('open');
 
@@ -166,7 +163,6 @@
 
         }
         async function loopedLines() {
-            console.log("fired")
 
             for (var i = 0; i < lines.length; i++) {
                 await drawLine(lines[i]);
@@ -177,7 +173,6 @@
             return new Promise(resolve => {
                 setTimeout(() => {
                     line.style.display = 'inline-block';
-                    // line.style.marginRight = '10px';
                     line.style.width = '40px';
                     resolve();
                 }, 200)
@@ -186,7 +181,6 @@
 
 
         function drawLines() {
-            console.log(lines)
             loopedLines();
 
         }
@@ -194,11 +188,6 @@
         function scrollToTop() {
             works.scrollIntoView(true)
         }
-
-
-
-
-
 
 
 
