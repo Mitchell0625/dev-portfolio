@@ -234,6 +234,11 @@ footer p {
 #contact p {
   text-align: center;
 }
+@media (max-width: 418px) {
+  #main {
+    padding: 82px 37px 0px 37px;
+  }
+}
 @media (min-width: 767px) {
   header {
     margin: 30px;
