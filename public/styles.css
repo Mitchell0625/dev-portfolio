@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  color: #333;
+}
+p {
+  font-family: "Open sans", sans-serif;
+}
+
+section h2 {
+  text-align: center;
+}
+#work h2,
+#contact h2 {
+  padding-top: 40px;
+}
+.gray {
+  width: 70vw;
+  background-color: gray;
+  height: 1px;
+  margin: 10px auto;
+}
+
+/*----Header-----*/
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 23px;
+}
+#wide {
+  display: none;
+}
+.logo {
+  height: 50px;
+}
+
+#slide {
+  display: none;
+}
+
+#slide.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100px;
+  font-size: 25px;
+  height: 40vh;
+  line-height: 50px;
+  transition: 3s top;
+  padding-left: 3px;
+  position: relative;
+  top: 30%;
+}
+#slide a:hover {
+  border-bottom: 1px solid #0081ca;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*-------Home Section----------*/
+#main {
+  height: 60vh;
+  width: 100vw;
+  margin: 0px auto;
+  text-align: center;
+  padding: 82px 40px 0px 40px;
+}
+#main h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.vivid {
+  color: #0081ca;
+  font-size: 21px;
+}
+.vivid:hover {
+  color: #ff3a00;
+}
+
+#main p {
+  font-size: 18px;
+  min-width: 240px;
+  font-family: "Oswald", sans-serif;
+}
+
+.line {
+  height: 5px;
+  width: 0px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  margin: 40px auto;
+}
+.coral {
+  background-color: #ff3a00;
+}
+
+.yellow {
+  background-color: #ffab00;
+}
+
+.blue {
+  background-color: #208ccc;
+}
+
+.purple {
+  background-color: #6554c0;
+}
+.green {
+  background-color: #65d600;
+}
+
+.pink {
+  background-color: #da5799;
+}
+
+/*---Skills--*/
+.skills {
+  margin-bottom: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.skills h2 {
+  text-align: center;
+  margin: 38px 0px 25px 0px;
+}
+.skills i {
+  font-size: 40px;
+  margin: 10px;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.current-learning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.learning {
+  height: 40px;
+  width: 41px;
+  margin: 10px;
+}
+/*-----------Work Section------*/
+
+#work h2 {
+  text-align: center;
+  padding-top: 40px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.screenshot {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.square {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  padding: 20px 35px;
+}
+.square h3 {
+  letter-spacing: 0.5px;
+}
+.placeholder {
+  width: 100%;
+  padding: 13% 12%;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder img {
+  margin: auto;
+}
+.tech {
+  margin-top: 20px;
+}
+footer p {
+  font-size: 12px;
+  text-align: center;
+  padding: 30px 30px 10px 30px;
+}
+/*---------Contact Section-----------*/
+.links a {
+  color: #0081ca;
+  font-size: 50px;
+  margin: 10px;
+}
+#contact {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
+}
+#contact h2 {
+  margin-bottom: 38px;
+}
+#contact p {
+  text-align: center;
+}
+@media (min-width: 767px) {
+  header {
+    margin: 30px;
+  }
+  #container,
+  #slide {
+    display: none;
+  }
+
+  #wide {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  #wide a:hover {
+    color: #0081ca;
+  }
+  .gray {
+    width: 60vw;
+    background-color: gray;
+    height: 1px;
+    margin: auto;
+  }
+
+  #main {
+    padding: 80px;
+  }
+  #main p {
+    font-size: 20px;
+  }
+
+  .skills h2 {
+    padding-top: 30px;
+  }
+  .skills i {
+    font-size: 50px;
+    margin: 10px;
+  }
+  .learning {
+    width: 50px;
+    height: 50px;
+  }
+  .projects {
+    flex-direction: row;
+  }
+  .square p {
+    font-size: 14px;
+  }
+
+  #contact {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills {
+    margin: 20px 80px 80px;
+  }
+  .square {
+    width: 30%;
+    padding: 20px 60px;
+  }
+}
